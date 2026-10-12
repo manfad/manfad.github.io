@@ -32,23 +32,6 @@ const agents = [
   { label: 'Kimi', icon: '/icons/kimi.svg', inv: true, href: 'https://www.kimi.com' },
 ]
 
-const workspace = [
-  { label: 'Ghostty', icon: '/icons/ghostty.svg', inv: true, href: 'https://ghostty.org' },
-  { label: 'zsh', icon: '/icons/zsh.svg', href: 'https://www.zsh.org' },
-  { label: 'tmux', icon: '/icons/tmux.svg', href: 'https://github.com/tmux/tmux' },
-  { label: 'Neovim', icon: '/icons/neovim.svg', href: 'https://neovim.io' },
-  { label: 'dotfiles', icon: '/icons/github.svg', inv: true, href: 'https://github.com/manfad/dotfile' },
-]
-
-const keyboards = [
-  'Kinesis Advantage 2 (daily driver)',
-  'Dactyl Manuform',
-  'Sofle Plus 2',
-  'Silakka54',
-  'Corne',
-  'HHKB Studio',
-]
-
 const timeline = [
   '2023 — graduated from Swinburne University of Technology, Sarawak',
   '2023–2025 — programmer & IT support at Sinatech Sdn. Bhd., working as a vendor for Sabah government departments',
@@ -96,6 +79,13 @@ const projects = [
       'Website for Yimei Environment Protection Technology — industrial wastewater treatment systems, giving every drop a second life.',
     tags: ['Astro'],
     link: 'https://yimei.my',
+  },
+  {
+    name: 'kpom.my',
+    description:
+      'Website for Keningau Palm Oil Mill — palm oil milling in Keningau, Sabah, from the growers and the harvest to the mill.',
+    tags: ['Astro'],
+    link: 'https://kpom.my',
   },
   {
     name: 'This site',
@@ -148,19 +138,6 @@ const projects = [
 
   <h2 id="projects"><Mark type="box" color="#4467c4">Projects</Mark></h2>
   <ProjectCards client:only="vue" projects={projects} />
-
-  <Doodle client:only="vue" />
-
-  <h2 id="beyond"><Mark type="highlight" color="#b7e4c7">Fun facts about me</Mark></h2>
-  <StackChips
-    client:only="vue"
-    label="I prefer living in the terminal — my CLI-first setup:"
-    items={workspace}
-  />
-  <p class="soft chip-caption">
-    I love collecting keyboards of every shape — here's the current lineup:
-  </p>
-  <RoughList client:only="vue" items={keyboards} />
 
   <Doodle client:only="vue" />
 

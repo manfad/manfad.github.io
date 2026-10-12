@@ -132,10 +132,6 @@ html.dark img.inv {
   font-size: 0.9rem;
 }
 
-.chip-caption {
-  margin: 0.9rem 0 0.4rem;
-}
-
 /* em-dash scrollspy */
 .scrollspy {
   position: fixed;
