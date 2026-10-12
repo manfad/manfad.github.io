@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro'
+import Mark from '../components/Mark.astro'
+import Doodle from '../components/Doodle.vue'
+import StickyNotes from '../components/projects/StickyNotes.vue'
+import ProjectMap from '../components/projects/ProjectMap.vue'
+import NotebookIndex from '../components/projects/NotebookIndex.vue'
+import TerminalWindow from '../components/projects/TerminalWindow.vue'
+import { products, websites } from '../data/projects'
+---
+
+<Base title="Project lab — Manfred Tham" description="Four ways to show my projects, side by side.">
+  <h1 id="intro">Project <Mark type="highlight" color="#ffe066">lab</Mark></h1>
+  <p class="soft">Four takes on the Projects section. Pick one and it goes on the home page.</p>
+
+  <h2 id="sticky"><Mark type="highlight" color="#ffe066">1 · Sticky notes</Mark></h2>
+  <StickyNotes client:only="vue" products={products} websites={websites} />
+
+  <Doodle client:only="vue" />
+
+  <h2 id="projects"><Mark type="highlight" color="#a5d8ff">2 · Hand-drawn map</Mark></h2>
+  <ProjectMap client:only="vue" products={products} websites={websites} />
+
+  <Doodle client:only="vue" />
+
+  <h2 id="index"><Mark type="highlight" color="#f5e08c">3 · Notebook index</Mark></h2>
+  <NotebookIndex client:only="vue" products={products} websites={websites} />
+
+  <Doodle client:only="vue" />
+
+  <h2 id="contact"><Mark type="highlight" color="#b7e4c7">4 · Terminal window</Mark></h2>
+  <TerminalWindow client:only="vue" products={products} websites={websites} />
+</Base>
