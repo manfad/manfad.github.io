@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro'
 import Mark from '../components/Mark.astro'
 import RoughHighlightTrail from '../components/RoughHighlightTrail.astro'
 import Doodle from '../components/Doodle.vue'
-import ProjectCards from '../components/ProjectCards.vue'
+import StickyNotes from '../components/projects/StickyNotes.vue'
 import RoughList from '../components/RoughList.vue'
 import ContactLinks from '../components/ContactLinks.vue'
 import StackChips from '../components/StackChips.vue'
@@ -81,8 +81,7 @@ const timeline = [
   <Doodle client:only="vue" />
 
   <h2 id="projects"><Mark type="highlight" color="#b7e4c7">Projects</Mark></h2>
-  <ProjectCards client:only="vue" label="Tools I build for myself and other developers:" projects={products} />
-  <ProjectCards client:only="vue" label="Websites for local businesses:" projects={websites} />
+  <StickyNotes client:only="vue" products={products} websites={websites} />
 
   <Doodle client:only="vue" />
 
